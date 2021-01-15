@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/f6816dd194.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <p>Photogenie</p>
+        </header>
+        <section class="main">
+
+        </section>
+        <footer>
+            <div class="tab active">
+                <a href="#" class="icon"><i class="fas fa-home"></i></a>
+                <p>Home</p>
+            </div>
+            <div class="tab">
+                <a href="#" class="icon"><i class="fas fa-globe-europe"></i></a>
+                <p>Navigate</p>
+            </div>
+            <div class="tab">
+                <a href="#" class="icon"><i class="fas fa-video"></i></a>
+                <p>videos</p>
+            </div>
+            <div class="tab">
+                <a href="#" class="icon"><i class="fas fa-comment-dots"></i></i></a>
+                <p>Chats</p>
+            </div>
+            <div class="tab">
+                <a href="#" class="icon"><i class="fas fa-user-circle"></i></a>
+                <p>Profile</p>
+            </div>
+        </footer>
+    </div>
+    <script>
+        const icon = document.getElementsByClassName("icon");
+        const tab = document.getElementsByClassName("tab");
+        for(i = 0;i < icon.length;i++){
+            icon[i].addEventListener("click",function(){
+                for(i = 0;i < tab.length;i++){
+                    tab[i].classList.remove('active');
+                }
+                this.parentElement.classList.toggle("active");
+            });
+        }
+    </script>
+</body>
+</html>
